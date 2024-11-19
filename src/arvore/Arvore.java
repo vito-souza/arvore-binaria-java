@@ -88,11 +88,13 @@ public class Arvore {
      * @param node O nó atual da árvore a ser visitado.
      */
     public void preOrder(Node node) {
-        System.out.println(node.getValue()); // Percorre o nó raiz.
+        if (node != null) {
+            System.out.println(node.getValue()); // Percorre o nó raiz.
 
-        preOrder(node.getLeft()); // Percorre a subárvore à esquerda.
+            preOrder(node.getLeft()); // Percorre a subárvore à esquerda.
 
-        preOrder(node.getRight()); // Percorre toda a subárvore à direita.
+            preOrder(node.getRight()); // Percorre toda a subárvore à direita.
+        }
     }
 
     /**
@@ -120,10 +122,12 @@ public class Arvore {
      * @param node O nó atual da árvore a ser visitado.
      */
     public void postOrder(Node node) {
-        postOrder(node.getLeft()); // Percorre a subárvore à esquerda.
+        if (node != null) {
+            postOrder(node.getLeft()); // Percorre a subárvore à esquerda.
 
-        postOrder(node.getRight()); // Percorre toda a subárvore à direita.
+            postOrder(node.getRight()); // Percorre toda a subárvore à direita.
 
-        System.out.println(node.getValue()); // Percorre o nó raiz.
+            System.out.println(node.getValue()); // Percorre o nó raiz.
+        }
     }
 }
